@@ -24,7 +24,7 @@ To install just simply pip install:
 
 ## Usage
 
-    from onecall import OneCallSession, SMS
+    from onecall.onecall import OneCallSession, SMS
 
     oc = OneCallSession('phoneNumber', 'password')
     oc.login()
