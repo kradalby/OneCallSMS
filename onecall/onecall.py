@@ -45,8 +45,8 @@ class SMS:
     Class for creating and sending a SMS message through OneCalls website.
     """
     
-    def __init__(self, toNumber, message, oneCallUser):
-        self.toNumber = toNumber
+    def __init__(self, toNumbers, message, oneCallUser):
+        self.toNumbers = toNumbers
         self.message = message
         self.oneCallUser = oneCallUser
 
@@ -56,10 +56,11 @@ class SMS:
         return True
 
     def isValidNumber(self):
-        if len(self.toNumber) > 8:
-            raise PhoneNumberException("The phone number has wrong length. Correct is 8")
-        elif not self.toNumber.isdigit():
-            raise PhoneNumberException("The phone number has more than digits")
+        for number in self.toNumbers:
+            if len(number) > 8:
+                raise PhoneNumberException("The phone number has wrong length. Correct is 8")
+            elif not number.isdigit():
+                raise PhoneNumberException("The phone number has more than digits")
         return True
 
     def prepare_sms_data(self):
@@ -67,7 +68,7 @@ class SMS:
             'avsender': self.oneCallUser.phoneNumber,
             'tonumber': 'Nummer',
             # Actual to number
-            'nummer': self.toNumber,
+            'nummer': ";".join(self.toNumbers),
             'smsmsg': self.message,
             'cntLen2': len(self.message),
             'numsms': '1',

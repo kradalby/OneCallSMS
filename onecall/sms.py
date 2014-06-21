@@ -23,7 +23,7 @@ if __name__ == "__main__":
                             help='OneCall phonenumber that you will send from')
 
     parser.add_argument('--tonumber', '-t', dest='tonumber', required=True,
-                        help='Phonenumber of the recipient')
+                        nargs='+', help='Phonenumber of the recipient')
     parser.add_argument('--message', '-m', dest='message', required=True,
                         help='The message you would like to send')
 
