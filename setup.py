@@ -2,10 +2,10 @@ from distutils.core import setup
 
 setup(
     name='OneCallSMS',
-    version='0.0.0.0.1',
+    version='0.0.0.0.2',
     author='Kristoffer Dalby',
     author_email='kradalby@kradalby.no',
-    packages=['onecallsms'],
+    packages=['onecall'],
     scripts=[],
     url='https://github.com/kradalby/OneCallSMS',
     license='LICENSE.txt',

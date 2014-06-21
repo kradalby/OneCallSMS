@@ -24,11 +24,10 @@ To install just simply pip install:
 
 ## Usage
 
-    :::python
-    from onecallsms import OneCallInstance, SMS
+    from onecall.sms import OneCallInstance, SMS
 
     oc = OneCallInstance('phoneNumber', 'password')
     oc.login()
 
-    sms = SMS('toPhoneNumber', 'essage', oc)
+    sms = SMS('toPhoneNumber', 'Message', oc)
     sms.send()
