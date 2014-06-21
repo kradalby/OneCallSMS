@@ -34,7 +34,6 @@ class OneCallSession:
             'Logg_Inn': "Logg Inn"
         }
         r = self.session.post(LOGINURL, data=loginData) 
-        print(self.session.cookies)
         if r.status_code == 200:
             return True
         else:
@@ -84,7 +83,10 @@ class SMS:
         sms = self.prepare_sms_data()
         session = self.oneCallUser.session
         r = session.post(SMSURL, data=sms)
-        print(r.text)
+        if "Melding er sendt" in r.text:
+            print("Sent successfully")
+        else:
+            print("Message failed")
 
 
         

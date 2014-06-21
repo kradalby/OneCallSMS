@@ -24,10 +24,38 @@ To install just simply pip install:
 
 ## Usage
 
-    from onecall.sms import OneCallInstance, SMS
+    from onecall import OneCallSession, SMS
 
-    oc = OneCallInstance('phoneNumber', 'password')
+    oc = OneCallSession('phoneNumber', 'password')
     oc.login()
 
     sms = SMS('toPhoneNumber', 'Message', oc)
     sms.send()
+
+# sms.py command
+
+## Usage
+
+usage: sms.py [-h] [--number NUMBER] --tonumber TONUMBER --message MESSAGE
+
+Send SMS from commandline
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --number NUMBER, -n NUMBER
+                        OneCall phonenumber that you will send from
+  --tonumber TONUMBER, -t TONUMBER
+                        Phonenumber of the recipient
+  --message MESSAGE, -m MESSAGE
+                        The message you would like to send
+
+
+## Configuration file
+The sms.py script will look for a config file in your home dir named .onecallsms.json
+
+It is written in JSON and might look like this:
+    
+    {
+        "number": "",
+        "password": ""
+    }
