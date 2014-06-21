@@ -4,7 +4,7 @@ import argparse
 import getpass
 import json
 import os
-from onecall import OneCallSession, SMS
+from onecall.onecall import OneCallSession, SMS
 
 if __name__ == "__main__":
 

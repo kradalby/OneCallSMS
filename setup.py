@@ -5,7 +5,7 @@ setup(
     version='0.0.0.0.3',
     author='Kristoffer Dalby',
     author_email='kradalby@kradalby.no',
-    packages=['onecall.onecall'],
+    packages=['onecall'],
     scripts=['onecall/sms.py'],
     url='https://github.com/kradalby/OneCallSMS',
     license='LICENSE.txt',
