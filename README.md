@@ -36,18 +36,18 @@ To install just simply pip install:
 
 ## Usage
 
-usage: sms.py [-h] [--number NUMBER] --tonumber TONUMBER --message MESSAGE
+    usage: sms.py [-h] [--number NUMBER] --tonumber TONUMBER --message MESSAGE
 
-Send SMS from commandline
+    Send SMS from commandline
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --number NUMBER, -n NUMBER
-                        OneCall phonenumber that you will send from
-  --tonumber TONUMBER, -t TONUMBER
-                        Phonenumber of the recipient
-  --message MESSAGE, -m MESSAGE
-                        The message you would like to send
+    optional arguments:
+      -h, --help            show this help message and exit
+      --number NUMBER, -n NUMBER
+                            OneCall phonenumber that you will send from
+      --tonumber TONUMBER, -t TONUMBER
+                            Phonenumber of the recipient
+      --message MESSAGE, -m MESSAGE
+                            The message you would like to send
 
 
 ## Configuration file
