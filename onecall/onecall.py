@@ -88,6 +88,7 @@ class SMS:
             print("Sent successfully")
         else:
             print("Message failed")
+            print(r.text)
 
 
         

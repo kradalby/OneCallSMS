@@ -2,11 +2,11 @@ from distutils.core import setup
 
 setup(
     name='OneCallSMS',
-    version='0.0.0.0.3',
+    version='0.0.0.0.4',
     author='Kristoffer Dalby',
     author_email='kradalby@kradalby.no',
     packages=['onecall'],
-    scripts=['onecall/sms.py'],
+    scripts=['sms.py'],
     url='https://github.com/kradalby/OneCallSMS',
     license='LICENSE.txt',
     description='Simple package for sending SMS through OneCalls website',
